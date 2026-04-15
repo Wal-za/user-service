@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>User System</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f9;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        h1 {
+            text-align: center;
+            background: #2c3e50;
+            color: white;
+            margin: 0;
+            padding: 20px;
+        }
+
+        nav {
+            text-align: center;
+            background: #34495e;
+            padding: 10px;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        section {
+            max-width: 400px;
+            margin: 30px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background: #2ecc71;
+            border: none;
+            color: white;
+            font-weight: bold;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #27ae60;
+        }
+
+        a {
+            display: block;
+            text-align: center;
+            margin-top: 10px;
+            color: #2980b9;
+        }
+
+        hr {
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>Sistema de Usuarios</h1>
+
+<nav>
+    <a href="#register">Registro</a>
+    <a href="#login">Login</a>
+    <a href="#forgot">Recuperar contraseña</a>
+    <a href="#reset">Reset contraseña</a>
+</nav>
+
+<section id="register">
+    <h2>Registro</h2>
+    <input id="rname" placeholder="Nombre">
+    <input id="remail" placeholder="Email">
+    <button onclick="register()">Registrar</button>
+</section>
+
+<section id="login">
+    <h2>Login</h2>
+    <input id="lemail" placeholder="Email">
+    <input id="lpassword" placeholder="Contraseña">
+    <button onclick="login()">Ingresar</button>
+</section>
+
+<section id="forgot">
+    <h2>Recuperar contraseña</h2>
+    <input id="femail" placeholder="Email">
+    <button onclick="forgot()">Enviar token</button>
+</section>
+
+<section id="reset">
+    <h2>Reset contraseña</h2>
+    <input id="token" placeholder="Token">
+    <input id="newpass" placeholder="Nueva contraseña">
+    <button onclick="resetPassword()">Cambiar contraseña</button>
+</section>
+
+<script src="app.js"></script>
+
+</body>
+</html>
